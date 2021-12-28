@@ -18,8 +18,8 @@ public class WeaselProgram {
         String actualTruth = "ABCDEFG HIJKLMNOPQR STUVWXYZ";
 
         int steps = 0;
-        float mutationFactor =  args.length > 0 ? Integer.parseInt(args[1]) : 0.05f;
-        int reproductionFactor =  args.length > 1 ? Integer.parseInt(args[2]) : 100;
+        float mutationFactor =  args.length > 0 ? Integer.parseInt(args[0]) : 0.05f;
+        int reproductionFactor =  args.length > 1 ? Integer.parseInt(args[1]) : 100;
         long start = System.nanoTime();
         while (!actualTruth.equals(groundTruth)) {
             Set<String> mutants = new HashSet<>(reproductionFactor);
